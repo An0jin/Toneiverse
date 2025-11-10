@@ -42,7 +42,7 @@
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-700 hover:text-[#E86A50] font-bold">홈</a>
-                <a href="privacy.html" class="text-[#E86A50] font-extrabold">개인정보처리방침</a>
+                <a href="Privacy.html" class="text-[#E86A50] font-extrabold">개인정보처리방침</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-700 focus:outline-none">
@@ -55,7 +55,7 @@
         
         <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] pb-4">
             <a href="index.html" class="block px-8 py-2 text-gray-700 hover:bg-[#F29479] hover:text-white font-bold">홈</a>
-            <a href="privacy.html" class="block px-8 py-2 text-[#E86A50] bg-white font-extrabold">개인정보처리방침</a>
+            <a href="Privacy.html" class="block px-8 py-2 text-[#E86A50] bg-white font-extrabold">개인정보처리방침</a>
         </div>
     </header>
 
@@ -156,7 +156,7 @@
                 });
             });
 
-            document.querySelectorAll('a[href="index.html"], a[href="privacy.html"]').forEach(anchor => {
+            document.querySelectorAll('a[href="index.html"], a[href="Privacy.html"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
