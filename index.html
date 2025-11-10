@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toniverse - 진짜 내 톤 찾기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Retro Peach & Coral (Main Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
+    <!-- Application Structure Plan: Whimsical, Kitsch Retro Style: 1. Hero (Playful Branding), 2. 3-Step Flow (Visualizing the fun, continuous journey of Diagnosis-Trial-Community), 3. Detailed Feature Cards (Using fun, textured boxes), 4. CTA (Matching the app's button style). This structure prioritizes fun and engagement over serious professional reporting. -->
+    <!-- Visualization & Content Choices: Replaced professional icons with whimsical emojis. Used CSS to create the 3D, textured button/box effect matching the uploaded UI images. -->
+    <style>
+        body {
+            /* 앱 UI의 밝은 배경색 */
+            background-color: #F7EFE5; 
+            color: #333333;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .text-main-color {
+            color: #E86A50; /* 버튼 그림자색과 유사한 메인 강조색 */
+        }
+        .font-jua {
+            font-family: 'Jua', sans-serif; /* 제목에 키치한 느낌의 폰트 적용 */
+        }
+
+        /* 앱 UI의 둥글고 입체감 있는 버튼 스타일 */
+        .kitsch-btn {
+            background-color: #F29479; /* 코랄/연어색 */
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px; /* 매우 둥근 모서리 */
+            font-weight: bold;
+            box-shadow: 0 6px 0 0 #E86A50; /* 버튼 아래 그림자 */
+            transition: all 0.1s ease-in-out;
+            border: 2px solid #E86A50;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.1); /* 폰트 그림자 */
+        }
+        .kitsch-btn:active {
+            box-shadow: 0 2px 0 0 #E86A50;
+            transform: translateY(4px);
+        }
+        
+        /* 앱 UI의 텍스트 입력 박스 스타일 */
+        .kitsch-box {
+            background-color: #FDF9F2;
+            border: 2px solid #E86A50;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 0 0 #F29479;
+            padding: 1.5rem;
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#F7EFE5] sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-4xl">
+            <a href="#home" class="text-3xl font-jua text-main-color">
+                🌈 Toneiverse
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#solution" class="text-gray-700 hover:text-main-color font-bold transition duration-300">핵심 솔루션</a>
+                <a href="#features" class="text-gray-700 hover:text-main-color font-bold transition duration-300">알찬 기능</a>
+                <a href="#community" class="text-gray-700 hover:text-main-color font-bold transition duration-300">톤 친구</a>
+                <a href="privacy.html" class="text-gray-700 hover:text-main-color font-bold transition duration-300">개인정보 처리 방침</a>
+                <a href="#cta" class="kitsch-btn text-lg py-2 px-6 shadow-md">
+                    지금 바로 시작!
+                </a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <span class="text-2xl">💖</span>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F29479] px-6 pb-4 space-y-2 font-bold text-white">
+            <a href="#solution" class="block py-2">핵심 솔루션</a>
+            <a href="#features" class="block py-2">알찬 기능</a>
+            <a href="#community" class="block py-2">톤 친구</a>
+            <a href="privacy.html" class="block py-2">개인정보 처리 방침</a>
+            <a href="#cta" class="block kitsch-btn py-2 px-4 shadow-none mt-2 text-center border-white">
+                앱 시작하기
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center justify-center min-h-screen-75 text-center max-w-4xl">
+            <div class="max-w-4xl">
+                <!-- 이미지 UI의 'Toneiverse' 폰트 및 로고 대체 -->
+                <div class="flex justify-center mb-6">
+                    <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true" alt="Toniverse 메인 로고" class="rounded-full border-4 border-[#F29479] shadow-xl p-2">
+                </div>
+                <h1 class="text-6xl md:text-8xl font-jua text-main-color mb-6 leading-tight" style="text-shadow: 3px 3px 0 #F29479;">
+                    Toneiverse
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-10 font-bold">
+                    내 퍼스널 컬러, 이제 더 이상 헤매지 마! <br class="hidden md:inline">
+                    진단부터 메이크업, 쇼핑, 수다까지 한 번에 해결하는 <span class="text-main-color">토털 뷰티 놀이터</span>예요!
+                </p>
+                <a href="#solution" class="kitsch-btn text-2xl transform hover:scale-105">
+                    궁금하면 꾹 눌러봐! 👇
+                </a>
+            </div>
+        </section>
+
+        <section id="solution" class="bg-[#F29479] py-20 md:py-24">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-jua text-white mb-4" style="text-shadow: 2px 2px 0 #E86A50;">
+                        💖 Toneiverse가 특별한 이유 💖
+                    </h2>
+                    <p class="text-xl text-white font-bold max-w-3xl mx-auto">
+                        진단만 하고 끝나는 1회성 앱은 이제 그만! 우리 앱은 '진단 - 체험 - 커뮤니티'의 즐거운 순환을 만들어요.
+                    </p>
+                </div>
+
+                <!-- 3단계 순환 구조 다이어그램 (UI 스타일 반영) -->
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-4 lg:space-x-8 relative">
+
+                    <!-- Step 1: 진단 -->
+                    <div class="flow-step kitsch-box bg-white w-full md:w-1/3 text-center">
+                        <div class="text-5xl mb-3">🔍</div>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">1단계: 초정밀 내 톤 찾기</h3>
+                        <p class="text-gray-600 font-bold">
+                            정밀 센서가 주변 방해 요소를 걷어내고, 진짜 내 퍼스널 컬러만 쏙쏙 찾아줘요!
+                        </p>
+                    </div>
+
+                    <!-- Arrow 1 (Emoji) -->
+                    <div class="hidden md:block text-5xl text-white font-bold">
+                        →
+                    </div>
+
+                    <!-- Step 2: 체험 -->
+                    <div class="flow-step kitsch-box bg-white w-full md:w-1/3 text-center">
+                        <div class="text-5xl mb-3">💋</div>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">2단계: 실시간 메이크업 착붙 체험</h3>
+                        <p class="text-gray-600 font-bold">
+                            진단받은 내 톤에 맞는 립스틱, 섀도우를 화면으로 바로 발라보고 찰떡 조합을 찾아봐요!
+                        </p>
+                    </div>
+
+                    <!-- Arrow 2 (Emoji) -->
+                    <div class="hidden md:block text-5xl text-white font-bold">
+                        →
+                    </div>
+                    
+                    <!-- Step 3: 연결 -->
+                    <div class="flow-step kitsch-box bg-white w-full md:w-1/3 text-center">
+                        <div class="text-5xl mb-3">👭</div>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">3단계: 톤 친구들과 정보 공유</h3>
+                        <p class="text-gray-600 font-bold">
+                            같은 퍼스널 컬러 친구들이랑 꿀팁, 인생템을 실시간 채팅방에서 주고받아요!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 md:py-24">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-jua text-main-color mb-4" style="text-shadow: 2px 2px 0 #F29479;">
+                        💄 알찬 핵심 기능 총정리 💄
+                    </h2>
+                    <p class="text-xl text-gray-700 font-bold max-w-3xl mx-auto">
+                        이 모든 기능이 단 하나의 앱, Toneiverse 안에 쏙! 들어가 있어요.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Feature 1: 가상 메이크업 -->
+                    <div class="kitsch-box bg-white">
+                        <span class="text-5xl mb-3 block">✨</span>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">AR 가상 메이크업!</h3>
+                        <p class="text-gray-600 font-bold">
+                            진단 후 바로 AR로 체험해서 화장품 구매 전 예상 모습을 직관적으로 확인! 실패 없는 쇼핑을 시작해 보세요.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2: 실시간 톤별 채팅 -->
+                    <div class="kitsch-box bg-white">
+                        <span class="text-5xl mb-3 block">🗣️</span>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">실시간 톤 그룹 채팅방!</h3>
+                        <p class="text-gray-600 font-bold">
+                            나와 똑같은 톤의 친구들과 실시간으로 인생템 정보 교환! 정보 필터링이 필요 없어 편리해요.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3: 상황별 추천 시스템 -->
+                    <div class="kitsch-box bg-white">
+                        <span class="text-5xl mb-3 block">🤖</span>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">AI 상황별 추천 컨설팅!</h3>
+                        <p class="text-gray-600 font-bold">
+                            "오늘은 면접인데?" "내일은 데이트인데?" 상황을 입력하면 AI가 맞춤 메이크업 팁을 알려드려요.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 4: 정밀 분석 모듈 -->
+                    <div class="kitsch-box bg-white">
+                        <span class="text-5xl mb-3 block">🧍‍♀️</span>
+                        <h3 class="text-2xl font-bold text-main-color mb-2">1인 전용 정밀 모드!</h3>
+                        <p class="text-gray-600 font-bold">
+                            진단 정확도를 위해 카메라에 오직 1인만 있을 때 작동해요. 데이터 혼선을 막고 나에게만 집중해요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="py-20 md:py-24">
+            <div class="container mx-auto px-6 max-w-4xl text-center kitsch-box">
+                <h2 class="text-4xl md:text-5xl font-jua text-main-color mb-6" style="text-shadow: 2px 2px 0 #F29479;">
+                    💬 톤 친구들과 함께하는 뷰티 성장!
+                </h2>
+                <p class="text-xl text-gray-700 font-bold mb-8">
+                    같은 고민을 가진 톤 친구들이 당신을 기다리고 있어요. 커뮤니티에서 정보를 얻고, 당신의 꿀팁도 공유하며 모두 함께 예뻐져요!
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <span class="bg-[#F29479] text-white px-4 py-2 rounded-full font-bold shadow-md">#봄웜라_인생템</span>
+                    <span class="bg-[#F29479] text-white px-4 py-2 rounded-full font-bold shadow-md">#여쿨_착붙_틴트</span>
+                    <span class="bg-[#F29479] text-white px-4 py-2 rounded-full font-bold shadow-md">#가을뮤트_찰떡_조합</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="py-24 text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-jua text-main-color mb-6" style="text-shadow: 2px 2px 0 #F29479;">
+                    지금 바로 Toniverse 시작!
+                </h2>
+                <p class="text-xl text-gray-700 font-bold max-w-2xl mx-auto mb-10">
+                    AI 진단부터 톤 친구 채팅까지, 이 모든 즐거움을 경험해 보세요!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse" class="kitsch-btn text-2xl transform hover:scale-105">
+                        Google Play에서 다운로드 (Android) 🌟
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#F7EFE5] border-t border-[#F29479] py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500 font-bold">
+            &copy; 2025 Toniverse. 진짜 내 톤을 찾아주는 뷰티 놀이터.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
