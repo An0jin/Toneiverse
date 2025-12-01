@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toneiverse - 팀원 소개</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+
+    <main class="flex-grow container mx-auto px-6 py-12">
+
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-jua text-[#E86A50] mb-4">
+                Toneiverse 개발 팀원
+            </h1>
+            <p class="text-lg text-gray-600 font-medium break-keep">
+                나만의 톤을 찾아주는 Toneiverse를 만들어가는<br>
+                팀원들의 이력과 역량을 소개합니다.
+            </p>
+        </div>
+
+        <div id="team-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        </div>
+
+    </main>
+
+    <footer class="bg-[#F7EFE5] border-t border-[#F29479] py-8 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-500 font-bold">
+            &copy; 2025 Toneiverse. 진짜 내 톤을 찾아주는 뷰티 놀이터.
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA SECTION: tenure 값을 'YYYY.MM.DD' 형식으로 입력하세요 ---
+        const teamMembers = [
+            {
+                id: 1,
+                role: "Project Manager & Backend & AI Data Analyst & AR Frontend",
+                name: "안영진",
+                education: "경복대학교 빅데이터학과",
+                tasks: [
+                    "데이터 수집 및 증강",
+                    "API 개발 및 DB 구축",
+                    "AR 프론트엔드 개발",
+                    "AI AR 연동",
+                    "클라우드 서버 운영",
+                ],
+                tech: ["Windows", "Ubuntu", "C#", "python", "Ultralytics", "Gemini API", "FastAPI", "Postgresql", "pandas", "oracle cloud", "docker", "shell script", "Unity", "photon", "Roboflow", "open cv", "smtplib", "AdMob"],
+                tenure: "2022.03.01"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const teamGrid = document.getElementById('team-grid');
+
+            teamMembers.forEach(member => {
+                // Tech Stack Tags
+                const techHtml = member.tech.map(t =>
+                    `<span class="px-2 py-1 bg-[#F7EFE5] text-[#E86A50] text-xs font-bold rounded-full border border-[#F29479]">${t}</span>`
+                ).join('');
+
+                // Task List
+                const tasksHtml = member.tasks.map(t =>
+                    `<li class="flex items-start text-sm text-gray-600 mb-1">
+                        <span class="mr-2 text-[#F29479]">✔</span> ${t}
+                    </li>`
+                ).join('');
+
+                // Card Layout - Tenure Format Updated
+                const cardHtml = `
+                    <div class="card-kitsch p-8 flex flex-col relative overflow-hidden group">
+                        
+                        <div class="absolute top-0 left-0 w-full h-2 bg-[#F29479]"></div>
+                        
+                        <div class="mb-6 border-b border-dashed border-[#F29479] pb-4">
+                            <h3 class="text-3xl font-jua text-gray-800 mb-1">${member.name}</h3>
+                            <p class="text-[#F29479] font-bold text-base">${member.role}</p>
+                        </div>
+
+                        <div class="w-full space-y-5">
+                            
+                            <div class="w-full">
+                                <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                                    <span>재직 기간</span>
+                                    <span>${member.tenure}~</span> </div>
+                            </div>
+
+                            <div class="text-left w-full">
+                                <h4 class="font-jua text-[#E86A50] text-sm mb-1">🎓 학력</h4>
+                                <p class="text-sm text-gray-600">
+                                    ${member.education}
+                                </p>
+                            </div>
+
+                            <div class="text-left w-full">
+                                <h4 class="font-jua text-[#E86A50] text-sm mb-1">⚡ 담당 업무</h4>
+                                <ul class="pl-1">
+                                    ${tasksHtml}
+                                </ul>
+                            </div>
+
+                            <div class="text-left w-full">
+                                <h4 class="font-jua text-[#E86A50] text-sm mb-2">🛠 사용 기술</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    ${techHtml}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                `;
+
+                teamGrid.innerHTML += cardHtml;
+            });
+
+            // Trigger Animation
+            setTimeout(() => {
+                document.querySelectorAll('.tenure-bar').forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-width');
+                });
+            }, 100);
+        });
+    </script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

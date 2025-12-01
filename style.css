@@ -1,0 +1,141 @@
+/* Base Styles */
+body {
+    background-color: #F7EFE5;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-jua {
+    font-family: 'Jua', sans-serif;
+}
+
+/* Utilities */
+.text-main-color {
+    color: #E86A50;
+}
+
+/* Components */
+
+/* Kitsch Button (index.html) */
+.kitsch-btn {
+    background-color: #F29479;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    box-shadow: 0 6px 0 0 #E86A50;
+    transition: all 0.1s ease-in-out;
+    border: 2px solid #E86A50;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.kitsch-btn:active {
+    box-shadow: 0 2px 0 0 #E86A50;
+    transform: translateY(4px);
+}
+
+/* Kitsch Box (index.html) */
+.kitsch-box {
+    background-color: #FDF9F2;
+    border: 2px solid #E86A50;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 0 0 #F29479;
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Kitsch Card (team.html, links.html) */
+.card-kitsch {
+    background-color: white;
+    border: 2px solid #F29479;
+    box-shadow: 6px 6px 0px 0px #E86A50;
+    border-radius: 1rem;
+    transition: transform 0.2s;
+}
+
+.card-kitsch:hover {
+    transform: translateY(-5px);
+}
+
+/* 3D Kitsch Button (links.html) */
+.btn-3d-kitsch {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Jua', sans-serif;
+    font-size: 1.125rem;
+    color: #4A4A4A;
+    background-color: #F29479;
+    border: 2px solid #4A4A4A;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 0 0 #E86A50;
+    transform: translate(0, 0);
+    transition: all 0.15s ease-out;
+    text-decoration: none;
+}
+
+.btn-3d-kitsch:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 #E86A50;
+}
+
+.btn-3d-kitsch:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 #E86A50;
+}
+
+/* Nav Link (links.html) */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #4A4A4A;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #F29479;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: #E86A50;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Shadows (privacy.html) */
+.btn-shadow {
+    box-shadow: 0 4px 0 0 #E86A50;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 2px 0 0 #E86A50;
+    transform: translateY(2px);
+}
+
+.card-shadow {
+    box-shadow: 0 10px 15px -3px rgba(232, 106, 80, 0.1), 0 4px 6px -2px rgba(232, 106, 80, 0.05);
+}
+
+/* Animations (team.html) */
+.tenure-bar {
+    transition: width 1.5s ease-out;
+    width: 0%;
+}

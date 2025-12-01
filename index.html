@@ -1,97 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-        <link rel="icon" href="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png">
+    <link rel="icon" href="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toneiverse - 진짜 내 톤 찾기</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- Chosen Palette: Retro Peach & Coral (Main Background: #F7EFE5, Accent: #F29479, Shadow: #E86A50) -->
     <!-- Application Structure Plan: Whimsical, Kitsch Retro Style: 1. Hero (Playful Branding), 2. 3-Step Flow (Visualizing the fun, continuous journey of Diagnosis-Trial-Community), 3. Detailed Feature Cards (Using fun, textured boxes), 4. CTA (Matching the app's button style). This structure prioritizes fun and engagement over serious professional reporting. -->
     <!-- Visualization & Content Choices: Replaced professional icons with whimsical emojis. Used CSS to create the 3D, textured button/box effect matching the uploaded UI images. -->
-    <style>
-        body {
-            /* 앱 UI의 밝은 배경색 */
-            background-color: #F7EFE5; 
-            color: #333333;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .text-main-color {
-            color: #E86A50; /* 버튼 그림자색과 유사한 메인 강조색 */
-        }
-        .font-jua {
-            font-family: 'Jua', sans-serif; /* 제목에 키치한 느낌의 폰트 적용 */
-        }
-
-        /* 앱 UI의 둥글고 입체감 있는 버튼 스타일 */
-        .kitsch-btn {
-            background-color: #F29479; /* 코랄/연어색 */
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 9999px; /* 매우 둥근 모서리 */
-            font-weight: bold;
-            box-shadow: 0 6px 0 0 #E86A50; /* 버튼 아래 그림자 */
-            transition: all 0.1s ease-in-out;
-            border: 2px solid #E86A50;
-            text-shadow: 1px 1px 0 rgba(0,0,0,0.1); /* 폰트 그림자 */
-        }
-        .kitsch-btn:active {
-            box-shadow: 0 2px 0 0 #E86A50;
-            transform: translateY(4px);
-        }
-        
-        /* 앱 UI의 텍스트 입력 박스 스타일 */
-        .kitsch-box {
-            background-color: #FDF9F2;
-            border: 2px solid #E86A50;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 0 0 #F29479;
-            padding: 1.5rem;
-            transition: all 0.2s ease-in-out;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true" alt="Toneiverse Logo" class="h-10 w-10">
-                <span class="font-jua text-3xl text-[#E86A50]">Toneiverse</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link">홈</a>
-                <a href="links.html" class="nav-link">소스 코드</a>
-                <a href="privacy.html" class="nav-link">개인정보처리방침</a>
-            </div>
-
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-[#E86A50] focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
-            <a href="index.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">홈</a>
-            <a href="links.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">소스 코드</a>
-            <a href="privacy.html" class="block py-3 px-6 text-lg font-bold text-gray-600 hover:bg-[#FFFBF5]">개인정보처리방침</a>
-        </div>
-    </header>
-
+<body class="antialiased">
 
     <main>
-        <section id="home" class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center justify-center min-h-screen-75 text-center max-w-4xl">
+        <section id="home"
+            class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center justify-center min-h-screen-75 text-center max-w-4xl">
             <div class="max-w-4xl">
                 <!-- 이미지 UI의 'Toneiverse' 폰트 및 로고 대체 -->
                 <div class="flex justify-center mb-6">
-                    <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true" alt="Toneiverse 메인 로고" class="rounded-full border-4 border-[#F29479] shadow-xl p-2">
+                    <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true"
+                        alt="Toneiverse 메인 로고" class="rounded-full border-4 border-[#F29479] shadow-xl p-2">
                 </div>
-                <h1 class="text-6xl md:text-8xl font-jua text-main-color mb-6 leading-tight" style="text-shadow: 3px 3px 0 #F29479;">
+                <h1 class="text-6xl md:text-8xl font-jua text-main-color mb-6 leading-tight"
+                    style="text-shadow: 3px 3px 0 #F29479;">
                     Toneiverse
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-700 mb-10 font-bold">
@@ -116,7 +52,8 @@
                 </div>
 
                 <!-- 3단계 순환 구조 다이어그램 (UI 스타일 반영) -->
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-4 lg:space-x-8 relative">
+                <div
+                    class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-4 lg:space-x-8 relative">
 
                     <!-- Step 1: 진단 -->
                     <div class="flow-step kitsch-box bg-white w-full md:w-1/3 text-center">
@@ -145,7 +82,7 @@
                     <div class="hidden md:block text-5xl text-white font-bold">
                         →
                     </div>
-                    
+
                     <!-- Step 3: 연결 -->
                     <div class="flow-step kitsch-box bg-white w-full md:w-1/3 text-center">
                         <div class="text-5xl mb-3">👭</div>
@@ -161,7 +98,8 @@
         <section id="features" class="py-20 md:py-24">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-jua text-main-color mb-4" style="text-shadow: 2px 2px 0 #F29479;">
+                    <h2 class="text-4xl md:text-5xl font-jua text-main-color mb-4"
+                        style="text-shadow: 2px 2px 0 #F29479;">
                         💄 알찬 핵심 기능 총정리 💄
                     </h2>
                     <p class="text-xl text-gray-700 font-bold max-w-3xl mx-auto">
@@ -196,7 +134,7 @@
                             "오늘은 면접인데?" "내일은 데이트인데?" 상황을 입력하면 AI가 맞춤 메이크업 팁을 알려드려요.
                         </p>
                     </div>
-                    
+
                     <!-- Feature 4: 정밀 분석 모듈 -->
                     <div class="kitsch-box bg-white">
                         <span class="text-5xl mb-3 block">🧍‍♀️</span>
@@ -234,7 +172,8 @@
                     AI 진단부터 톤 친구 채팅까지, 이 모든 즐거움을 경험해 보세요!
                 </p>
                 <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
-                    <a href="https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse" class="kitsch-btn text-2xl transform hover:scale-105">
+                    <a href="https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse"
+                        class="kitsch-btn text-2xl transform hover:scale-105">
                         Google Play에서 다운로드 (Android) 🌟
                     </a>
                 </div>
@@ -250,31 +189,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
+                    if (targetElement) {
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
-                    }
-                    if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
                     }
                 });
             });
         });
     </script>
 
+    <script src="navbar.js"></script>
 </body>
+
 </html>
