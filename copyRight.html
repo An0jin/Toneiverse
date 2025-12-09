@@ -90,36 +90,16 @@
 
 <body class="antialiased flex flex-col min-h-screen">
 
-    <!-- Navbar (Replicated structure for standalone functionality) -->
-    <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <!-- Fallback to emoji if image fails in preview -->
-                <span class="text-3xl">🎨</span>
-                <span class="font-jua text-3xl text-[#E86A50]">Toneiverse</span>
-            </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">홈</a>
-                <a href="index.html#features" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">주요
-                    기능</a>
-                <a href="team.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">팀원 소개</a>
-                <a href="links.html" class="text-gray-600 hover:text-[#E86A50] font-bold transition-colors">자료 모음</a>
-            </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-[#E86A50] focus:outline-none">
-                <span class="text-3xl">☰</span>
-            </button>
-        </nav>
+    <script src="navbar.js"></script>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
-            <a href="index.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">홈</a>
-            <a href="team.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">팀원 소개</a>
-            <a href="links.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">자료 모음</a>
-        </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F7EFE5] border-t border-[#F29479]">
+        <a href="index.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">홈</a>
+        <a href="team.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">팀원 소개</a>
+        <a href="links.html" class="block py-2 px-6 text-gray-600 font-bold hover:bg-[#ffe4d9]">자료 모음</a>
+    </div>
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-12 max-w-5xl">
