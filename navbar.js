@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <header class="bg-[#F7EFE5] border-b-2 border-[#F29479] sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
-                <img src="https://github.com/An0jin/WarmCoolUnity/blob/main/Assets/img/icon.png?raw=true"
+                <img src="icon.png"
                     alt="Toneiverse Logo" class="h-10 w-10">
                 <span class="font-jua text-3xl text-[#E86A50]">Toneiverse</span>
             </a>
