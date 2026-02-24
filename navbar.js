@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
                 <img src="icon.png"
-                    alt="Toneiverse Logo" class="h-10 w-10">
-                <span class="font-jua text-3xl text-[#E86A50]">Toneiverse</span>
+                    alt="Toneiverse Logo" class="h-8 w-8 md:h-10 md:w-10">
+                <span class="font-jua text-2xl md:text-3xl text-[#E86A50]">Toneiverse</span>
             </a>
 
             <div class="hidden md:flex items-center space-x-8">
